@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/public/css/register.css', (req, res) => {
-  res.sendFile(__dirname + '/public/css/register.css')
+  res.sendFile(__dirname + '/public/css/register.css');
 });
 
 app.use(express.static(__dirname + '/public/assets/website'));

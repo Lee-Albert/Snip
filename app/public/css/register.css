@@ -11,29 +11,43 @@ body, html {
 
 .bg-image {
   position: fixed;
-  background-image: url("/skyline.jpeg");
-  background-size: 100%;
+  background-image: url("/tools4.jpg");
   background-position: center;
+  background-size: 100%;
   height: 100%;
   width: 100%;
   background-repeat: no-repeat;
 
-  filter: blur(10px);
-  -webkit-filter: blur(10px);
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
 
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: center;
 
   transform: scale(1.1)
 }
 
-#signin {
+#barber {
   height: 400px;
   width: 500px;
   position: fixed;
-  left: 50%; /* make site more responsive */
-  top: 50%;
+  left: 30%; /* make site more responsive */
+  top: 60%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255,255,255,0.3);
+  z-index: 2;
+  border-radius: 10px;
+
+  box-shadow: inset 0 0 20px 0px rgba(255,255,255,0.3);
+}
+
+#client {
+  height: 400px;
+  width: 500px;
+  position: fixed;
+  left: 70%; /* make site more responsive */
+  top: 60%;
   transform: translate(-50%, -50%);
   background-color: rgba(255,255,255,0.3);
   z-index: 2;

@@ -27,16 +27,24 @@
 
   <body>
     <div class='bg-image'></div>
-    <div id='signin'>
+    <div id='barber'>
       <div id='title'>
-        Sleck Chatroom
+        coiffeur.
       </div>
       <form id='login-form' method='post' action='/add_chatroom'>
         <input id='nameInput' type='text' name='name' placeholder='Name of Chatroom' autocomplete='off'>
         <input id='emailInput' type='email' name='email' placeholder='Your Email' autocomplete='off'>
-        <p id='chatLink'>chat link:
-          <a href='/'>http://www.sleckchat.com/dw351paw1xytz</a>
-        </p>
+        <button id='submit' type="button" class="btn btn-dark">Submit</button>
+      </form>
+    </div>
+
+    <div id='client'>
+      <div id='title'>
+          client.
+      </div>
+      <form id='login-form' method='post' action='/add_chatroom'>
+        <input id='nameInput' type='text' name='name' placeholder='Name of Chatroom' autocomplete='off'>
+        <input id='emailInput' type='email' name='email' placeholder='Your Email' autocomplete='off'>
         <button id='submit' type="button" class="btn btn-dark">Submit</button>
       </form>
     </div>
