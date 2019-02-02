@@ -1,0 +1,23 @@
+{
+  "name": "snip",
+  "version": "1.0.0",
+  "description": "a useful platform for hair stylists and customers",
+  "main": "app/app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexshi0000/Snip.git"
+  },
+  "author": "lx_user",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexshi0000/Snip/issues"
+  },
+  "homepage": "https://github.com/alexshi0000/Snip#readme"
+}
