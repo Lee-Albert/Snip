@@ -13,3 +13,7 @@ app.get('/', (req, res) => {
 app.get('/public/css/register.css', (req, res) => {
   res.sendFile(__dirname + '/public/css/register.css')
 });
+
+http.listen(3000, () => {
+  console.log('server is listening on http://localhost:3000, please connect to this')
+});
