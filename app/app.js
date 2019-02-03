@@ -124,11 +124,13 @@ app.post('/api/coif-login', (req, res) => {
   });
 });
 
+var clientname;
 app.post('/api/client-login', (req, res) => {
   console.log('new client login');
   console.log('client name: ' + req.body.name);
   console.log('client email: ' + req.body.email);
 
+  clientname = req.body.name;
   MongoClient.connect(url, (err, db) => {
     if (err)
       return err;
@@ -167,6 +169,7 @@ io.on('connection', (client) => {
           if (result.length != 0) {
             console.log('found all clients'); //success!!!
             client.emit('fetch_list', result);
+            console.log(result);
           }
           else {
             console.log('no clients in db');
@@ -185,8 +188,8 @@ io.on('connection', (client) => {
           if (err)
             throw err;
           if (result.length != 0) {
-            console.log('found all clients'); //success!!!
-            client.emit('fetch_list', result);
+            console.log('found all coifs'); //success!!!
+            client.emit('fetch_list', result, clientname);
           }
           else {
             console.log('no clients in db');
@@ -197,8 +200,26 @@ io.on('connection', (client) => {
     }
   });
 
-  client.on('book', (name) => {
-    console.log(name);
+  client.on('book', (coif, customer) => {
+    console.log(coif+" "+customer);
+    MongoClient.connect(url, (err, db) => {
+      if (err)
+        return err;
+      var dbo = db.db('snippdb');
+      var new_req = {
+        co : coif,
+        cu : customer
+      };
+      dbo.collection('requests').insertOne(new_req, (err, result) => {
+        if (err) {
+          throw err;
+        }
+        console.log("added request");
+
+        //redirect
+        db.close();
+      });
+    });
   });
 });
 

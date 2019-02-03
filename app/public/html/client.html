@@ -14,21 +14,31 @@
     <script src="/socket.io/socket.io.js"></script>
 
     <script>
+      var coifs = [];
+      var client = [];
+      var socket = io();
+      var glob;
       $(document).ready(() => {
-        var socket = io();
         socket.emit('grab_list', 'coif');
-        socket.on('fetch_list', (result) => {
+
+        socket.on('fetch_list', (result, self) => {
+          glob = self;
           //init
           var i = 0;
           for (i; i < result.length; i++) {
+            coifs.push(result[i].name);
             $(".list").append("<div class=\"boxy\">" +
                 "<p id=\"listname\">" + result[i].name + "</p>"      +
                 "<p id=\"listemail\">" + result[i].email + "</p>"     +
-                "<button style=\"margin-top: 10px;height: 20%;width: 50%;\" type=\"button\" class=\"btn btn-warning\">Book</button>" +
+                "<button onclick=\"emit_name("+i+")\" style=\"margin-top: 10px;height: 20%;width: 50%;\" type=\"button\" class=\"btn btn-warning\">Book</button>" +
             "</div>");
           }
         });
       });
+      function emit_name(n) {
+        console.log('booked coifeur ' + coifs[n] +' '+ glob);
+        socket.emit('book', coifs[n], glob);
+      }
     </script>
   </head>
 
