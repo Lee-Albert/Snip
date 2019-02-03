@@ -1,0 +1,278 @@
+* {
+  outline:none; /* remove chrome outline */
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased; /* add some antialiasing here */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body, html {
+  height: 100%;
+}
+
+.bg-image {
+  position: fixed;
+  background-image: url("/shop.jpg");
+  background-position: center;
+  background-size: 100%;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: center;
+
+  transform: scale(1.1)
+}
+
+.black-bg {
+  height: 15%;
+  width: 100%;
+
+  background-position: center;
+  background-size: 100%;
+  background-color: rgba(0,0,0,0.85);
+  position: fixed;
+  z-index: 1;
+  background-repeat: no-repeat;
+}
+
+.logo {
+  height: 13%;
+  width: 20%;
+  background-position: center;
+  background-size: 100%;
+  background-image: url("/logo-snipp-mq.png");
+  position: fixed;
+  right: 39%;
+  top: 1%;
+  z-index: 1;
+  background-repeat: no-repeat;
+}
+
+#barber {
+  height: 70%;
+  width: 40%;
+  position: fixed;
+  left: 28%; /* make site more responsive */
+  top: 57%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255,255,255,0.3);
+  z-index: 2;
+  border-radius: 10px;
+
+  box-shadow: inset 0 0 20px 0px rgba(255,255,255,0.3);
+}
+
+#client {
+  height: 70%;
+  width: 40%;
+  position: fixed;
+  left: 72%; /* make site more responsive */
+  top: 57%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255,255,255,0.3);
+  z-index: 2;
+  border-radius: 10px;
+
+  box-shadow: inset 0 0 20px 0px rgba(255,255,255,0.3);
+}
+
+#title {
+  z-index: 2;
+  border-radius: 10px 10px 0px 0px;
+  text-align:center;
+  height: 15%;
+  width: 100%;
+  background-color: rgba(255,255,255,0.5);
+  padding: 15px;
+
+  line-height: 200%;
+
+  font-size: 1.9vw;
+  font-family: 'Poiret One', cursive;
+  -webkit-text-stroke: 1.5px rgba(100, 100, 100, 0.7); /* GREAT ANTIALIASING HACK */
+  color: #555;
+  left: 50%;
+  transform: translate(-50%, 0);
+  position: absolute;
+}
+
+/* CIRCLES */
+
+.barber-image-round {
+  position: fixed;
+  object-fit: cover;
+  background-image: url("/barber.jpg");
+  background-position: center center;
+  background-size: 100%;
+  height: 40%;
+  width: 40%;
+  left: 30%;
+  top: 20%;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+}
+
+.client-image-round {
+  position: fixed;
+  object-fit: cover;
+  background-image: url("/client.jpg");
+  background-position: center center;
+  background-size: 100%;
+  height: 40%;
+  width: 40%;
+  left: 30%;
+  top: 20%;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+}
+
+/* INPUTS */
+
+#phoneInput {
+  height: 30px;
+  width: 300px;
+  background-color: transparent;
+
+  border: transparent;
+  border-bottom: solid rgba(50,50,50,0.4);
+  border-width: 2px;
+
+  position: absolute;
+  right: 50%;
+  top: 70%;
+  transform: translate(50%, 0);
+
+  color: #111;
+  font-size: 28px;
+  font-family: 'Poiret One', cursive;
+  -webkit-text-stroke: 1.5px rgba(50, 50, 50, 0.7); /* GREAT ANTIALIASING HACK */
+}
+
+#addressInput {
+  height: 30px;
+  width: 300px;
+  background-color: transparent;
+
+  border: transparent;
+  border-bottom: solid rgba(50,50,50,0.4);
+  border-width: 2px;
+
+  position: absolute;
+  right: 50%;
+  top: 80%;
+  transform: translate(50%, 0);
+
+  color: #111;
+  font-size: 28px;
+  font-family: 'Poiret One', cursive;
+  -webkit-text-stroke: 1.5px rgba(50, 50, 50, 0.7); /* GREAT ANTIALIASING HACK */
+}
+
+#nameInput {
+  height: 30px;
+  width: 300px;
+  background-color: transparent;
+
+  border: transparent;
+  border-bottom: solid rgba(50,50,50,0.4);
+  border-width: 2px;
+
+  position: absolute;
+  right: 50%;
+  top: 65%;
+  transform: translate(50%, 0);
+
+  color: #111;
+  font-size: 28px;
+  font-family: 'Poiret One', cursive;
+  -webkit-text-stroke: 1.5px rgba(50, 50, 50, 0.7); /* GREAT ANTIALIASING HACK */
+
+  text-align: center;
+}
+
+#emailInput {
+  height: 30px;
+  width: 300px;
+  background-color: transparent;
+
+  border: transparent;
+  border-bottom: solid rgba(50,50,50,0.4);
+  border-width: 2px;
+
+  position: absolute;
+  right: 50%;
+  top: 75%;
+  transform: translate(50%, 0);
+
+  color: #111;
+  font-size: 28px;
+  font-family: 'Poiret One', cursive;
+  -webkit-text-stroke: 1.5px rgba(50, 50, 50, 0.7); /* GREAT ANTIALIASING HACK */
+
+  text-align: center;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: rgba(50,50,50,0.2);
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: rgba(50,50,50,0.2);
+}
+
+#submit {
+  height: 50px;
+  width: 150px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  position: absolute;
+  bottom: 20px;
+  font-size: 25px;
+  color: #ddd;
+  font-family: 'Poiret One', cursive;
+  -webkit-text-stroke: 1.1px rgba(255, 255, 255, 0.3); /* GREAT ANTIALIASING HACK */
+
+  box-shadow: inset 0 0 40px 2px rgba(20,20,20,0.3);
+}
+
+#chatLink {
+  position: relative;
+  top: 380px;
+  padding: 35px;
+  z-index: 999;
+  visibility: visible;
+  color: rgba(255,255,255,0.9);
+  font-size: 19px;
+
+  font-family: 'Poiret One', cursive;
+  -webkit-text-stroke: 1.1px rgba(255, 255, 255, 0.3); /* GREAT ANTIALIASING HACK */
+}
+
+a:link {
+  color: rgba(95,125,255,0.8);
+}
+
+a:hover {
+  color: rgba(95,115,255,1);
+  text-decoration: none;
+}
+
+a:active {
+  color: rgba(95,125,255,0.8);
+}
+
+a:visited {
+  color: rgba(95,125,255,0.8);
+}
+
+/*
+ * Leave a changelog metadata or Todolist here smthing
+ *   - social links (github, facebook, twitter, etc)
+ *   - help about links
+ *   - generate hash using mongodb and add chat links
+ *   - visibility control in js
+ */
