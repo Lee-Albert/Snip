@@ -18,7 +18,14 @@
         var socket = io();
         socket.emit('grab_list', 'coif');
         socket.on('fetch_list', (result) => {
-          console.log(result);
+          //init
+          var i = 0;
+          for (i; i < result.length; i++) {
+            $(".list").append("<div class=\"boxy\">" +
+                "<p id=\"listname\">" + result[i].name + "</p>"      +
+                "<p id=\"listemail\">" + result[i].email + "</p>"     +
+            "</div>");
+          }
         });
       });
     </script>
@@ -29,8 +36,6 @@
       <div class="logo"></div>
     </div>
     <div class="list">
-      <ul class="offers">
-      </ul>
     </div>
   </body>
 </html>
