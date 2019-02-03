@@ -2,7 +2,7 @@
 
 <html>
   <head>
-    <title>Sleck - Registration</title>
+    <title>snipp.</title>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet'>
 
@@ -35,7 +35,10 @@
       <div id="title">
         I am a coiffeur.
       </div>
-      <form id="login-form" method="post" action="http://localhost:3000/add_chatroom">
+
+      <form id="coif-form" method="post" action="http:/snipp.localtunnel.me/api/coif-login">
+         <input id='nameInput' type='text' name='name' placeholder='enter name' autocomplete='off'>
+         <input id='emailInput' type='email' name='email' placeholder='enter email' autocomplete='off'>
         <button id="submit" type="button" class="btn btn-dark">Next</button>
       </form>
     </div>
@@ -44,7 +47,12 @@
       <div id="title">
           I am a customer.
       </div>
-      <form id="login-form" method="post" action="http://localhost:3000/add_chatroom">
+
+      <form id="client-login" method="post" action="http:/snipp.localtunnel.me/api/client-login">
+        <input id='nameInput' type='text' name='name' placeholder='enter name' autocomplete='off'>
+        <input id='emailInput' type='email' name='email' placeholder='enter email' autocomplete='off'>
+        <input id='phoneInput' type='text' name='phone' placeholder='enter phone number' autocomplete='off'>
+        <input id='addressInput' type='text' name='address' placeholder='enter address' autocomplete='off'>
         <button id="submit" type="button" class="btn btn-dark">Next</button>
       </form>
     </div>

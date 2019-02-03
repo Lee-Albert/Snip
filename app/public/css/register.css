@@ -90,6 +90,8 @@ body, html {
   background-color: rgba(255,255,255,0.5);
   padding: 15px;
 
+  line-height: 200%;
+
   font-size: 1.9vw;
   font-family: 'Poiret One', cursive;
   -webkit-text-stroke: 1.5px rgba(100, 100, 100, 0.7); /* GREAT ANTIALIASING HACK */
@@ -99,24 +101,66 @@ body, html {
   position: absolute;
 }
 
+/* INPUTS */
+
+#phoneInput {
+  height: 30px;
+  width: 300px;
+  background-color: transparent;
+
+  border: transparent;
+  border-bottom: solid rgba(50,50,50,0.4);
+  border-width: 2px;
+
+  position: absolute;
+  right: 50%;
+  top: 70%;
+  transform: translate(50%, 0);
+
+  color: #111;
+  font-size: 28px;
+  font-family: 'Poiret One', cursive;
+  -webkit-text-stroke: 1.5px rgba(50, 50, 50, 0.7); /* GREAT ANTIALIASING HACK */
+}
+
+#addressInput {
+  height: 30px;
+  width: 300px;
+  background-color: transparent;
+
+  border: transparent;
+  border-bottom: solid rgba(50,50,50,0.4);
+  border-width: 2px;
+
+  position: absolute;
+  right: 50%;
+  top: 80%;
+  transform: translate(50%, 0);
+
+  color: #111;
+  font-size: 28px;
+  font-family: 'Poiret One', cursive;
+  -webkit-text-stroke: 1.5px rgba(50, 50, 50, 0.7); /* GREAT ANTIALIASING HACK */
+}
+
 #nameInput {
   height: 30px;
   width: 300px;
   background-color: transparent;
 
   border: transparent;
-  border-bottom: solid rgba(255,255,255,0.4);
+  border-bottom: solid rgba(50,50,50,0.4);
   border-width: 2px;
 
   position: absolute;
   right: 50%;
-  top: 150px;
+  top: 50%;
   transform: translate(50%, 0);
 
-  color: rgba(255,255,255,1);
+  color: #111;
   font-size: 28px;
   font-family: 'Poiret One', cursive;
-  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.3); /* GREAT ANTIALIASING HACK */
+  -webkit-text-stroke: 1.5px rgba(50, 50, 50, 0.7); /* GREAT ANTIALIASING HACK */
 }
 
 #emailInput {
@@ -125,25 +169,25 @@ body, html {
   background-color: transparent;
 
   border: transparent;
-  border-bottom: solid rgba(255,255,255,0.4);
+  border-bottom: solid rgba(50,50,50,0.4);
   border-width: 2px;
 
   position: absolute;
   right: 50%;
-  top: 250px;
+  top: 60%;
   transform: translate(50%, 0);
 
-  color: rgba(255,255,255,1);
+  color: #111;
   font-size: 28px;
   font-family: 'Poiret One', cursive;
-  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.3); /* GREAT ANTIALIASING HACK */
+  -webkit-text-stroke: 1.5px rgba(50, 50, 50, 0.7); /* GREAT ANTIALIASING HACK */
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: rgba(255,255,255,0.5);
+  color: rgba(50,50,50,0.5);
 }
 ::-moz-placeholder { /* Firefox 19+ */
-  color: rgba(255,255,255,0.5);
+  color: rgba(50,50,50,0.5);
 }
 
 #submit {
