@@ -28,6 +28,12 @@ body, html {
   transform: scale(1.1)
 }
 
+.list {
+  position: fixed;
+  top: 15%;
+  height: 85%;
+}
+
 .black-bg {
   height: 15%;
   width: 100%;

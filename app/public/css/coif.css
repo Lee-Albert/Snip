@@ -9,6 +9,12 @@ body, html {
   height: 100%;
 }
 
+.list {
+  position: fixed;
+  top: 15%;
+  height: 85%;
+}
+
 .bg-image {
   position: fixed;
   background-image: url("/shop.jpg");

@@ -11,25 +11,26 @@
 
     <link rel = 'stylesheet' href = '/public/css/client.css'>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
-    <!-- <script> migrated this to ext css or replaced with bootstrap
-      $(document).ready(function(){
-        $('#submit').hover(function(){
-          $(this).css('background-color', 'rgba(100, 100, 100, 0.5)')
-        }, () => {
-          $(this).css('background-color', 'rgba(0, 0, 0, 0.5)')
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script>
+      $(document).ready(() => {
+        var socket = io();
+        socket.emit('grab_list', 'client');
+        socket.on('fetch_list', (result) => {
+          console.log(result);
         });
       });
-    </script> --> <!-- migrated this snippet to a external js script -->
+    </script>
   </head>
 
   <body>
     <div class="black-bg">
       <div class="logo"></div>
     </div>
-    <ul>
-      <li>HA take this gig</li>
-      <li>HA no take this one</li>
-      <li>HA this is good</li>
-    </ul>
+    <div class="list">
+      <ul class="offers">
+      </ul>
+    </div>
   </body>
 </html>

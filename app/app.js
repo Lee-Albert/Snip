@@ -17,9 +17,21 @@ app.get('/public/html/coif.html', (req, res) => {
   res.sendFile(__dirname + '/public/html/coif.html');
 });
 
+app.get('/public/html/client.html', (req, res) => {
+  res.sendFile(__dirname + '/public/html/client.html');
+});
+
 //routing css
 app.get('/public/css/register.css', (req, res) => {
   res.sendFile(__dirname + '/public/css/register.css');
+});
+
+app.get('/public/css/coif.css', (req, res) => {
+  res.sendFile(__dirname + '/public/css/coif.css');
+});
+
+app.get('/public/css/client.css', (req, res) => {
+  res.sendFile(__dirname + '/public/css/client.css');
 });
 
 app.use(express.static(__dirname + '/public/assets/website'));
@@ -106,7 +118,7 @@ app.post('/api/coif-login', (req, res) => {
       console.log("added coif success");
 
       //redirect
-      res.sendFile(__dirname + '/public/html/coif.html');
+      res.redirect('/public/html/coif.html');
       db.close();
     });
   });
@@ -133,9 +145,56 @@ app.post('/api/client-login', (req, res) => {
       console.log("added client success");
 
       //redirect
-      res.sendFile(__dirname + '/public/html/client.html');
+      res.redirect('/public/html/client.html');
       db.close();
     });
+  });
+});
+
+// SOCKETIO
+
+io.on('connection', (client) => {
+  client.on('grab_list', (type) => {
+    if (type == 'coif') {
+      MongoClient.connect(url, (err, db) => {
+        if (err)
+          throw err;
+        var dbo = db.db('snippdb');
+
+        dbo.collection('client').find({}, {projection: { _id : 0 }}).toArray((err, result) => {
+          if (err)
+            throw err;
+          if (result.length != 0) {
+            console.log('found all clients'); //success!!!
+            client.emit('fetch_list', result);
+          }
+          else {
+            console.log('no clients in db');
+          }
+          db.close();
+        });
+      });
+    }
+    else if (type == 'client') {
+      MongoClient.connect(url, (err, db) => {
+        if (err)
+          throw err;
+        var dbo = db.db('snippdb');
+
+        dbo.collection('coif').find({}, {projection: { _id : 0 }}).toArray((err, result) => {
+          if (err)
+            throw err;
+          if (result.length != 0) {
+            console.log('found all clients'); //success!!!
+            client.emit('fetch_list', result);
+          }
+          else {
+            console.log('no clients in db');
+          }
+          db.close();
+        });
+      });
+    }
   });
 });
 
