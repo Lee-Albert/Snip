@@ -329,10 +329,12 @@ a:visited {
 }
 
 #listname {
+ padding: 10px;
  font-size: 36px;
 }
 
 #listemail {
+ padding: 10px;
  font-size: 24px;
 }
 

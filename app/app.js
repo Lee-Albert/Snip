@@ -196,6 +196,10 @@ io.on('connection', (client) => {
       });
     }
   });
+
+  client.on('book', (name) => {
+    console.log(name);
+  });
 });
 
 http.listen(3000, () => {
