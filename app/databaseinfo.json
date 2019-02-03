@@ -1,58 +1,58 @@
 {
     "coiffeurs":[
         {
-            "name":"c1",
-            "email":"c1@email.com",
-            "phone":"123",
-            "rating":"5",
-            "price":"15"
+            "name":"Cornelius Lawson",
+            "email":"c.lawson@gmail.com",
+            "phone":"416-632-1923",
+            "rating":"4.5",
+            "price":"20-30"
         },
         {
-            "name":"c2",
-            "email":"c2@email.com",
-            "phone":"123",
-            "rating":"5",
-            "price":"15"
+            "name":"Laura Winchester",
+            "email":"LauraWin@gmail.com",
+            "phone":"647-912-0092",
+            "rating":"3",
+            "price":"15-20"
         },
         {
-            "name":"c3",
-            "email":"c3@email.com",
-            "phone":"123",
-            "rating":"5",
-            "price":"15"
+            "name":"Gerald Wang",
+            "email":"g.wang3@gmail.com",
+            "phone":"647-233-1111",
+            "rating":"3.5",
+            "price":"10-15"
         },
         {
-            "name":"c4",
-            "email":"c4@email.com",
-            "phone":"123",
-            "rating":"5",
-            "price":"15"
+            "name":"Hope Olaidapa",
+            "email":"H.Olaidapa@gmail.com",
+            "phone":"416-111-1231",
+            "rating":"3",
+            "price":"20-30"
         }
     ],
     "customers":[
         {
-            "name":"cs1",
-            "email":"cs1@email.com",
-            "phone":"123",
-            "address":"123 way"
+            "name":"Jean Billy",
+            "email":"MJBilly@gmail.com",
+            "phone":"435-121-1456",
+            "address":"252 Christie St"
         },
         {
-            "name":"cs2",
-            "email":"cs2@email.com",
-            "phone":"123",
-            "address":"123 way"
+            "name":"Gladys Horatio",
+            "email":"flowergirl@gmail.com",
+            "phone":"226-912-2355",
+            "address":"325 Connaught Ave"
         },
         {
-            "name":"cs3",
-            "email":"cs3@email.com",
-            "phone":"123",
-            "address":"123 way"
+            "name":"Bob Rossman",
+            "email":"brossob@gmail.com",
+            "phone":"519-213-1250",
+            "address":"310 Castlehill Rd"
         },
         {
-            "name":"cs4",
-            "email":"cs4@email.com",
-            "phone":"123",
-            "address":"123 way"
+            "name":"Walter Boddle",
+            "email":"achetooh@gmail.com",
+            "phone":"612-125-1231",
+            "address":"47 Bittersweet St"
         }
      ]
 }
