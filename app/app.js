@@ -17,7 +17,18 @@ app.get('/public/css/register.css', (req, res) => {
 
 app.use(express.static(__dirname + '/public/assets/website'));
 
-//db and handling post and get
+//api
+app.use(express.bodyParser());
+
+app.post('/api/coif-login', (req, res) => {
+  console.log('COIF TRIED TO LOGIN');
+  console.log('coif name: ' + req.body.name);
+  console.log('coif email: ' + req.body.email);
+});
+
+app.post('/api/client-login', (req, res) => {
+  console.log('CLIENT TRIED TO LOGIN');
+});
 
 http.listen(3000, () => {
   console.log('server is listening on http://localhost:3000, please connect to this')

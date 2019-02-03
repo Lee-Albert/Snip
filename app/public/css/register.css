@@ -191,6 +191,8 @@ body, html {
   font-size: 28px;
   font-family: 'Poiret One', cursive;
   -webkit-text-stroke: 1.5px rgba(50, 50, 50, 0.7); /* GREAT ANTIALIASING HACK */
+
+  text-align: center;
 }
 
 #emailInput {
@@ -211,6 +213,8 @@ body, html {
   font-size: 28px;
   font-family: 'Poiret One', cursive;
   -webkit-text-stroke: 1.5px rgba(50, 50, 50, 0.7); /* GREAT ANTIALIASING HACK */
+
+  text-align: center;
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
