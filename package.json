@@ -8,7 +8,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app/app.js"
+    "start": "node app/app.js",
+    "create_db": "node app/create_db.js",
+    "init_db": "node app/init_db.js"
   },
   "repository": {
     "type": "git",

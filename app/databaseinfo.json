@@ -1,27 +1,27 @@
-{  
-    "coiffeurs":[  
-        {  
+{
+    "coiffeurs":[
+        {
             "name":"c1",
             "email":"c1@email.com",
             "phone":"123",
             "rating":"5",
             "price":"15"
         },
-        {  
+        {
             "name":"c2",
             "email":"c2@email.com",
             "phone":"123",
             "rating":"5",
             "price":"15"
         },
-        {  
+        {
             "name":"c3",
             "email":"c3@email.com",
             "phone":"123",
             "rating":"5",
             "price":"15"
         },
-        {  
+        {
             "name":"c4",
             "email":"c4@email.com",
             "phone":"123",
@@ -30,25 +30,25 @@
         }
     ],
     "customers":[
-        {  
+        {
             "name":"cs1",
             "email":"cs1@email.com",
             "phone":"123",
             "address":"123 way"
         },
-        {  
+        {
             "name":"cs2",
             "email":"cs2@email.com",
             "phone":"123",
             "address":"123 way"
         },
-        {  
+        {
             "name":"cs3",
             "email":"cs3@email.com",
             "phone":"123",
             "address":"123 way"
         },
-        {  
+        {
             "name":"cs4",
             "email":"cs4@email.com",
             "phone":"123",
