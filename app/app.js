@@ -155,7 +155,7 @@ app.post('/api/client-login', (req, res) => {
 
 io.on('connection', (client) => {
   client.on('grab_list', (type) => {
-    if (type == 'coif') {
+    if (type == 'client') {
       MongoClient.connect(url, (err, db) => {
         if (err)
           throw err;
@@ -175,7 +175,7 @@ io.on('connection', (client) => {
         });
       });
     }
-    else if (type == 'client') {
+    else if (type == 'coif') {
       MongoClient.connect(url, (err, db) => {
         if (err)
           throw err;
