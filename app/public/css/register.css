@@ -45,7 +45,7 @@ body, html {
   width: 20%;
   background-position: center;
   background-size: 100%;
-  background-image: url("/logo-snipp-hq.png");
+  background-image: url("/logo-snipp-mq.png");
   position: fixed;
   right: 39%;
   top: 1%;
@@ -101,6 +101,36 @@ body, html {
   position: absolute;
 }
 
+/* CIRCLES */
+
+.barber-image-round {
+  position: fixed;
+  object-fit: cover;
+  background-image: url("/barber.jpg");
+  background-position: center center;
+  background-size: 100%;
+  height: 40%;
+  width: 40%;
+  left: 30%;
+  top: 20%;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+}
+
+.client-image-round {
+  position: fixed;
+  object-fit: cover;
+  background-image: url("/client.jpg");
+  background-position: center center;
+  background-size: 100%;
+  height: 40%;
+  width: 40%;
+  left: 30%;
+  top: 20%;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+}
+
 /* INPUTS */
 
 #phoneInput {
@@ -154,7 +184,7 @@ body, html {
 
   position: absolute;
   right: 50%;
-  top: 50%;
+  top: 65%;
   transform: translate(50%, 0);
 
   color: #111;
@@ -174,7 +204,7 @@ body, html {
 
   position: absolute;
   right: 50%;
-  top: 60%;
+  top: 75%;
   transform: translate(50%, 0);
 
   color: #111;
@@ -184,10 +214,10 @@ body, html {
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: rgba(50,50,50,0.5);
+  color: rgba(50,50,50,0.2);
 }
 ::-moz-placeholder { /* Firefox 19+ */
-  color: rgba(50,50,50,0.5);
+  color: rgba(50,50,50,0.2);
 }
 
 #submit {
