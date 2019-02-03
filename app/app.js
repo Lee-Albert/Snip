@@ -18,7 +18,14 @@ app.get('/public/css/register.css', (req, res) => {
 app.use(express.static(__dirname + '/public/assets/website'));
 
 //api
-app.use(express.bodyParser());
+
+const bodyParser = require("body-parser");
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+app.use(bodyParser.json());
+
+
 
 app.post('/api/coif-login', (req, res) => {
   console.log('COIF TRIED TO LOGIN');
