@@ -7,7 +7,7 @@ var fs      = require('fs')
 
 //endpoint
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/public/html/register1.html');
+  res.sendFile(__dirname + '/public/html/register.html');
 });
 
 app.get('/public/css/register.css', (req, res) => {
