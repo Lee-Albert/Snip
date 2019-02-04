@@ -22,11 +22,10 @@
           console.log(result);
           var i = 0;
           for (i; i < result.length; i++) {
-            coifs.push(result[i].name);
             $(".list").append("<div class=\"boxy\">" +
                 "<p id=\"listname\">" + result[i].name + "</p>"      +
                 "<p id=\"listemail\">" + result[i].email + "</p>"     +
-                "<button onclick=\"emit_name("+i+")\" style=\"margin-top: 10px;height: 20%;width: 50%;\" type=\"button\" class=\"btn btn-warning\">Accept Hire</button>" +
+                "<button style=\"margin-top: 10px;height: 20%;width: 50%;\" type=\"button\" class=\"btn btn-warning\">Accept Hire</button>" +
             "</div>");
           }
         });
